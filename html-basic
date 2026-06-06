@@ -65,6 +65,8 @@
     <h2>Google搜索</h2>
     <form action="https://www.google.com/search" method="get">
         <input type="text" name="q">
+        <input type="hidden" name="ie" value="utf-8">
+        <input type="hidden" name="sourceid" value="UTF-8">
         <button type="submit" target="_blank">在新窗口打开搜索结果</button>
     </form>
     <hr>
@@ -74,7 +76,7 @@
             <dt>性别</dt>
             <dd>
                 <label><input type="radio" name="gender" value="male"> 男</label>
-                <label><input type="radio" name="gender" value="female"> 女</label>
+                <input type="radio" name="gender" value="female" id="gender-female"><label for="gender-female"> 女</label></label>
             </dd>
 
             <dt>年龄</dt>
@@ -108,13 +110,13 @@
 
             <dt>照片</dt>
             <dd>
-                <input type="file" name="avatar" id="avatar-upload">
+                <input type="file" name="avatar" id="avatar-upload" hidden>
                 <label for="avatar-upload">点我上传照片，我比文件上传按钮好看</label>
             </dd>
 
             <dt>自我介绍</dt>
             <dd>
-                <textarea name="introduction" rows="4" cols="50"></textarea>
+                <textarea name="introduction" rows="10" cols="30">&lt;/textarea&gt;</textarea>
             </dd>
         </dl>
 
